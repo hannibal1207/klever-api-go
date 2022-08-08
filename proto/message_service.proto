@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option go_package="/pb";
+
+message Message {
+    string Message = 1;
+}
+
+message MessageInput{
+    string Message = 1;
+}
+
+service MessageService{
+    rpc CreateMessage(MessageInput) returns (Message) {}
+}
